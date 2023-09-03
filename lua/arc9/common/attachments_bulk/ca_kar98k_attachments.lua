@@ -12,8 +12,9 @@ ATT.Attachments = {
 		DefaultName = "Default Flash Hider",
 		Category = {"ca_ar_muzzles"}, -- single or {"list", "of", "values"}
 		Bone = "weapon",
-		Pos = Vector(-3, 0, 0),
-		Ang = Angle(0, 90, 180),
+		Scale = 0.6,
+		Pos = Vector(-5, 0, 0.3),
+		Ang = Angle(0, 180, 180),
 	},
 }
 
