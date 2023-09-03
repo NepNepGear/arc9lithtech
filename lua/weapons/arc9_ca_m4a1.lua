@@ -348,8 +348,8 @@ SWEP.Attachments = {
 		PrintName = "Gas block",
 		DefaultName = "Standard Gasblock",
 		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
-		ExcludeElements = {"ca_m4_barrels"},
 		Bone = "weapon",
+		--CosmeticOnly = true, -- This attachment is cosmetic only, and will be placed in the Personalization tab.
 		Pos = Vector(0, -6, 0),
 		Ang = Angle(0, 90, 180),
 	},

@@ -74,8 +74,8 @@ ATT.Attachments = {
 		PrintName = "Gas block",
 		DefaultName = "Standard Gasblock",
 		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
-		ActivateElements = {"ca_m4_short_gas"},
 		Bone = "weapon",
+		--CosmeticOnly = true, -- This attachment is cosmetic only, and will be placed in the Personalization tab.
 		Pos = Vector(-6, 0, 0),
 		Ang = Angle(0, 90, 180),
 	},
@@ -126,8 +126,8 @@ ATT.Attachments = {
 		PrintName = "Gas block",
 		DefaultName = "Standard Gasblock",
 		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
-		ActivateElements = {"ca_m4_long_gas"},
 		Bone = "weapon",
+		--CosmeticOnly = true, -- This attachment is cosmetic only, and will be placed in the Personalization tab.
 		Pos = Vector(-10, 0, 0),
 		Ang = Angle(0, 90, 180),
 	},
