@@ -44,9 +44,41 @@ ATT.ActivateElements = {"ca_m4_short_gas"}
 
 
 ATT.Attachments = {
-
-
-	
+	[1] = {
+		PrintName = "Underbarrel Accessories",
+		DefaultName = "No Accessories",
+		Category = {"ca_grips"}, -- single or {"list", "of", "values"}
+		Bone = "weapon",
+		Pos = Vector(-2.5, 0, 1),
+		Ang = Angle(0, 0, 0),
+	},
+	[2] = {
+		PrintName = "Tactical Devices",
+		DefaultName = "No Accessories",
+		Category = {"ca_ar_tactical"}, -- single or {"list", "of", "values"}
+		Bone = "weapon",
+		Scale = 0.8,
+		Pos = Vector(-3, -1, 0),
+		Ang = Angle(0, 180, 90),
+	},
+	[3] = {
+		PrintName = "Muzzle Device",
+		DefaultName = "Default Flash Hider",
+		Category = {"ca_ar_muzzles"}, -- single or {"list", "of", "values"}
+		Bone = "weapon",
+		Scale = 0.7,
+		Pos = Vector(-15.3, 0, 0),
+		Ang = Angle(0, 180, 180),
+	},
+	[4] = {
+		PrintName = "Gas block",
+		DefaultName = "Standard Gasblock",
+		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
+		ActivateElements = {"ca_m4_short_gas"},
+		Bone = "weapon",
+		Pos = Vector(-6, 0, 0),
+		Ang = Angle(0, 90, 180),
+	},
 }
 
 ARC9.LoadAttachment(ATT, "ca_m4_short_barrel")
@@ -57,13 +89,48 @@ ATT.PrintName = [[M16 20 Inch Barrel]]
 ATT.CompactName = [[Long Barrel]]
 ATT.Description = [[]]
 
+
+
 ATT.Category = {"ca_m4_barrels"}
 
 ATT.ActivateElements = {"ca_m4_long_gas"}
 
 ATT.Attachments = {
-
-
+	[1] = {
+		PrintName = "Underbarrel Accessories",
+		DefaultName = "No Accessories",
+		Category = {"ca_grips"}, -- single or {"list", "of", "values"}
+		Bone = "weapon",
+		Pos = Vector(-4, 0, 1),
+		Ang = Angle(0, 0, 0),
+	},
+	[2] = {
+		PrintName = "Tactical Devices",
+		DefaultName = "No Accessories",
+		Category = {"ca_ar_tactical"}, -- single or {"list", "of", "values"}
+		Bone = "weapon",
+		Scale = 0.8,
+		Pos = Vector(-7, -1, 0),
+		Ang = Angle(0, 180, 90),
+	},
+	[3] = {
+		PrintName = "Muzzle Device",
+		DefaultName = "Default Flash Hider",
+		Category = {"ca_ar_muzzles"}, -- single or {"list", "of", "values"}
+		Bone = "weapon",
+		Scale = 0.7,
+		Pos = Vector(-21, 0, 0),
+		Ang = Angle(0, 180, 180),
+	},
+	[4] = {
+		PrintName = "Gas block",
+		DefaultName = "Standard Gasblock",
+		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
+		ActivateElements = {"ca_m4_long_gas"},
+		Bone = "weapon",
+		Pos = Vector(-10, 0, 0),
+		Ang = Angle(0, 90, 180),
+	},
 	
 }
 
@@ -107,6 +174,10 @@ end
 
 ATT.ClipSize = 32
 ATT.RPMAdd = 200
+ATT.RecoilMult = 0.75
+ATT.RangeMaxMult = 0.4
+ATT.DamageMinMult = 0.8 
+ATT.DamageMaxMult = 0.8 
 ATT.ShootSound = "CA_port/ar/m4a1/ar15_fire.WAV"
 ATT.Ammo = "Pistol"
 
@@ -135,11 +206,7 @@ ATT.Description = [[]]
 ATT.Category = {"ca_m4_gas"}
 
 
-ATT.Attachments = {
 
-
-	
-}
 
 ARC9.LoadAttachment(ATT, "ca_m4_no_gas")
 
@@ -152,6 +219,11 @@ ATT.Description = [[]]
 
 ATT.Category = {"ca_m4_stocks"}
 
+ATT.RecoilMult = 0.85
+ATT.VisualRecoilMult = 0.80
+ATT.SpeedMult = 0.93
+ATT.AimDownSightsTimeMult = 1.15
+ATT.SprintToFireTimeMult = 1.1
 
 ATT.Attachments = {
 
@@ -176,6 +248,11 @@ ATT.Attachments = {
 	
 }
 
+ATT.AimDownSightsTimeMult = 0.93
+ATT.SprintToFireTimeMult = 0.95
+ATT.RecoilMult = 0.98
+ATT.VisualRecoilMult = 0.95
+
 ARC9.LoadAttachment(ATT, "ca_m4_comfort_stock")
 
 ATT = {}
@@ -185,6 +262,13 @@ ATT.CompactName = [[No Stock]]
 ATT.Description = [[]]
 
 ATT.Category = {"ca_m4_stocks"}
+
+ATT.BarrelLengthAdd = -3
+ATT.RecoilMult = 1.3
+ATT.VisualRecoilMult = 1.25
+ATT.SpeedMult = 1.1
+ATT.AimDownSightsTimeMult = 0.7
+ATT.SprintToFireTimeMult = 0.85
 
 
 ATT.Attachments = {
@@ -205,6 +289,7 @@ ATT.Description = [[]]
 ATT.Category = {"ca_m4_conversion"}
 
 ATT.RPMAdd = 100
+ATT.PostBurstDelay = 0.15
 
 ATT.Firemodes = {
 	{
@@ -231,6 +316,7 @@ ATT.Description = [[]]
 ATT.Category = {"ca_m4_conversion"}
 
 ATT.RPMAdd = -200
+
 
 ATT.Firemodes = {
 	{

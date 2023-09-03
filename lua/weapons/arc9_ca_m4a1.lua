@@ -193,7 +193,7 @@ SWEP.BreathRunOutSound = "arc9/breath_runout.wav"
 
 -------------------------- ATTACHMENTS
 
-SWEP.DefaultBodygroups = "0000000000000000000000"
+SWEP.DefaultBodygroups = "000000000000000000000000"
 
 SWEP.StandardPresets =  -- A table of standard presets, that would be in every player preset menu, undeletable. Just put preset codes in ""
 {
@@ -345,6 +345,15 @@ SWEP.Attachments = {
 		Ang = Angle(0, 90, 180),
 	},
 	[9] = {
+		PrintName = "Gas block",
+		DefaultName = "Standard Gasblock",
+		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
+		ExcludeElements = {"ca_m4_barrels"},
+		Bone = "weapon",
+		Pos = Vector(0, -6, 0),
+		Ang = Angle(0, 90, 180),
+	},
+	[10] = {
 		PrintName = "Bullets",
 		DefaultName = "Default 5.56x45mm Ball Ammo",
 		Category = {"ca_556"}, -- single or {"list", "of", "values"}
@@ -353,7 +362,7 @@ SWEP.Attachments = {
 		Pos = Vector(0, 4, 3),
 		Ang = Angle(0, 90, 180),
 	},
-	[10] = {
+	[11] = {
 		PrintName = "Perks",
 		DefaultName = "No Perks",
 		Category = {"ca_perks"}, -- single or {"list", "of", "values"}
@@ -526,7 +535,8 @@ SWEP.Animations = {
     },
 	["reload_empty_9mm"] = {
          Source = "reload_empty_9mm",
-		 IKTimeLine = {
+		 IKTimeLine = { -- t is in fraction of animation
+             {
                  t = 0,
                  lhik = 1,
                  rhik = 1
@@ -545,7 +555,8 @@ SWEP.Animations = {
                  t = 1,
                  lhik = 1,
                  rhik = 1
-          },
+            }
+         },
 		  EventTable = {
            {
                 t = 0.4, -- in seconds
@@ -568,37 +579,149 @@ SWEP.Animations = {
 	["reload_speed"] = {
          Source = "reload_speed",
 		 IKTimeLine = { -- t is in fraction of animation
-            
+            {
+                 t = 0,
+                 lhik = 1,
+                 rhik = 1
+             },
+			 {
+                 t = 0.2,
+                 lhik = 0,
+                 rhik = 0
+             },
+			 {
+                 t = 0.9,
+                 lhik = 0,
+                 rhik = 0
+             },
+             {
+                 t = 1,
+                 lhik = 1,
+                 rhik = 1
+            }
          },
-		 EventTable = {
-            
+		EventTable = {
+            {
+                t = 0.9667, -- in seconds
+                s = "CA_port/ar/m4a1/magout.wav", -- sound to play
+			},
+			{
+                t = 1.4, -- in seconds
+                s = "CA_port/ar/m4a1/magin.wav", -- sound to play
+			},
 		}
     },
 	["reload_speed_9mm"] = {
          Source = "reload_speed_9mm",
 		 IKTimeLine = { -- t is in fraction of animation
-            
+            {
+                 t = 0,
+                 lhik = 1,
+                 rhik = 1
+             },
+			 {
+                 t = 0.2,
+                 lhik = 0,
+                 rhik = 0
+             },
+			 {
+                 t = 0.9,
+                 lhik = 0,
+                 rhik = 0
+             },
+             {
+                 t = 1,
+                 lhik = 1,
+                 rhik = 1
+            }
          },
-		 EventTable = {
-           
+		EventTable = {
+            {
+                t = 0.9667, -- in seconds
+                s = "CA_port/ar/m4a1/magout.wav", -- sound to play
+			},
+			{
+                t = 1.4, -- in seconds
+                s = "CA_port/ar/m4a1/magin.wav", -- sound to play
+			},
 		}
     },
 	["reload_empty_speed"] = {
          Source = "reload_empty_speed",
 		 IKTimeLine = { -- t is in fraction of animation
-           
+           {
+                 t = 0,
+                 lhik = 1,
+                 rhik = 1
+             },
+			 {
+                 t = 0.15,
+                 lhik = 0,
+                 rhik = 0
+             },
+			 {
+                 t = 0.85,
+                 lhik = 0,
+                 rhik = 0
+             },
+             {
+                 t = 1,
+                 lhik = 1,
+                 rhik = 1
+            }
          },
 		 EventTable = {
-            
+            {
+                t = 1.0333, -- in seconds
+                s = "CA_port/ar/m4a1/magout.wav", -- sound to play
+			},
+			{
+                t = 1.5333, -- in seconds
+                s = "CA_port/ar/m4a1/magin.wav", -- sound to play
+			},
+			{
+                t = 2.0333, -- in seconds
+                s = "CA_port/ar/m4a1/bolt.wav", -- sound to play
+			},
 		}
     },
 	["reload_empty_speed_9mm"] = {
          Source = "reload_empty_speed_9mm",
 		  IKTimeLine = { -- t is in fraction of animation
-            
+            {
+                 t = 0,
+                 lhik = 1,
+                 rhik = 1
+             },
+			 {
+                 t = 0.15,
+                 lhik = 0,
+                 rhik = 0
+             },
+			 {
+                 t = 0.85,
+                 lhik = 0,
+                 rhik = 0
+             },
+             {
+                 t = 1,
+                 lhik = 1,
+                 rhik = 1
+            }
          },
-		  EventTable = {
-           
+		EventTable = {
+            {
+                t = 1.0333, -- in seconds
+                s = "CA_port/ar/m4a1/magout.wav", -- sound to play
+			},
+			{
+                t = 1.5333, -- in seconds
+                s = "CA_port/ar/m4a1/magin.wav", -- sound to play
+			},
+			{
+                t = 2.0333, -- in seconds
+                s = "CA_port/ar/m4a1/bolt.wav", -- sound to play
+			},
 		}
     },
 }
