@@ -1,0 +1,5 @@
+"UnlitGeneric"
+{
+	"$basetexture" "models/arrcw_combatarms/weapons/optics/scope_g36_optic"
+	"$translucent" 1
+}

@@ -1,0 +1,5 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/arrcw_combatarms/weapons/attachments/ca_pistol_lens"
+	"$translucent" 1
+}
