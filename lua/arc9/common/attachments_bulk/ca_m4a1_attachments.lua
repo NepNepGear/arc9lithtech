@@ -40,7 +40,7 @@ ATT.Description = [[]]
 
 ATT.Category = {"ca_m4_barrels"}
 
-ATT.ActivateElements = {"ca_m4_short_gas"}
+--ATT.ActivateElements = {"ca_m4_short_gas"}
 
 
 ATT.Attachments = {
@@ -71,13 +71,13 @@ ATT.Attachments = {
 		Ang = Angle(0, 180, 180),
 	},
 	[4] = {
-		PrintName = "Gas block",
-		DefaultName = "Standard Gasblock",
+		PrintName = "Front Post Sights",
+		DefaultName = "No Front Post Sights",
 		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
 		Bone = "weapon",
 		--CosmeticOnly = true, -- This attachment is cosmetic only, and will be placed in the Personalization tab.
-		Pos = Vector(-6, 0, 0),
-		Ang = Angle(0, 90, 180),
+		Pos = Vector(-6.35, -0.015, 0.3),
+		Ang = Angle(0, -90, 0),
 	},
 }
 
@@ -93,7 +93,7 @@ ATT.Description = [[]]
 
 ATT.Category = {"ca_m4_barrels"}
 
-ATT.ActivateElements = {"ca_m4_long_gas"}
+--ATT.ActivateElements = {"ca_m4_long_gas"}
 
 ATT.Attachments = {
 	[1] = {
@@ -123,13 +123,13 @@ ATT.Attachments = {
 		Ang = Angle(0, 180, 180),
 	},
 	[4] = {
-		PrintName = "Gas block",
-		DefaultName = "Standard Gasblock",
+		PrintName = "Front Post Sights",
+		DefaultName = "No Front Post Sights",
 		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
 		Bone = "weapon",
 		--CosmeticOnly = true, -- This attachment is cosmetic only, and will be placed in the Personalization tab.
-		Pos = Vector(-10, 0, 0),
-		Ang = Angle(0, 90, 180),
+		Pos = Vector(-10.4, -0.015, 0.4),
+		Ang = Angle(0, -90, 0),
 	},
 	
 }
@@ -199,16 +199,16 @@ ARC9.LoadAttachment(ATT, "ca_m4_9mm")
 -------------------------- Gas Block
 ATT = {}
 
-ATT.PrintName = [[Low Profile Gas Block]]
-ATT.CompactName = [[No front Post]]
+ATT.PrintName = [[Gas Block]]
+ATT.CompactName = [[Front Post]]
 ATT.Description = [[]]
 
 ATT.Category = {"ca_m4_gas"}
 
+ATT.Model = "models/combat_arms_port/attachments/v_m4a1_barrel_gas.mdl"
 
 
-
-ARC9.LoadAttachment(ATT, "ca_m4_no_gas")
+ARC9.LoadAttachment(ATT, "ca_m4_gasblock")
 
 -------------------------- Stocks
 ATT = {}

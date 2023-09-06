@@ -233,39 +233,24 @@ SWEP.AttachmentElements = {
             {3, 2}
         }
     },
-	["ca_m4_long_gas"] = {
+	["ca_m4_heavy_stock"] = {
         Bodygroups = {
             {4, 1}
         }
     },
-	["ca_m4_short_gas"] = {
+	["ca_m4_comfort_stock"] = {
         Bodygroups = {
             {4, 2}
         }
     },
-	["ca_m4_no_gas"] = {
+	["ca_m4_no_stock"] = {
         Bodygroups = {
             {4, 3}
         }
     },
-	["ca_m4_heavy_stock"] = {
-        Bodygroups = {
-            {5, 1}
-        }
-    },
-	["ca_m4_comfort_stock"] = {
-        Bodygroups = {
-            {5, 2}
-        }
-    },
-	["ca_m4_no_stock"] = {
-        Bodygroups = {
-            {5, 3}
-        }
-    },
 	["ca_m4_carryhandle_mount"] = {
         Bodygroups = {
-            {6, 1}
+            {5, 1}
         }
     },
 }
@@ -345,13 +330,15 @@ SWEP.Attachments = {
 		Ang = Angle(0, 90, 180),
 	},
 	[9] = {
-		PrintName = "Gas block",
-		DefaultName = "Standard Gasblock",
+		PrintName = "Front Post Sights",
+		DefaultName = "No Front Post Sights",
 		Category = {"ca_m4_gas"}, -- single or {"list", "of", "values"}
 		Bone = "weapon",
+		ExcludeElements = {"ca_m4_barrels"},
+		Scale = 1,
 		--CosmeticOnly = true, -- This attachment is cosmetic only, and will be placed in the Personalization tab.
-		Pos = Vector(0, -6, 0),
-		Ang = Angle(0, 90, 180),
+		Pos = Vector(0.015, -5.3, 0.4),
+		Ang = Angle(0, 0, 180),
 	},
 	[10] = {
 		PrintName = "Bullets",
